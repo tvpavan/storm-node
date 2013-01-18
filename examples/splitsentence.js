@@ -3,6 +3,8 @@ var Storm = require('../../storm-node');
 
 var SplitSentenceBolt = Storm.Bolt;
 
+SplitSentenceBolt.prototype.initialize = function(conf, context, self) {
+}
 SplitSentenceBolt.prototype.process = function(tuple, self) {
 	var words = tuple.tuple[0].split(" ");
 	
